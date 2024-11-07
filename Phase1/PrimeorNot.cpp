@@ -1,34 +1,26 @@
 //Check the number is prime or not
 
-#include <iostream> 
-#include <math.h> 
-using namespace std; 
-  
-int main() 
-{ 
-    int num, i, flag = 1; 
-  
-    cout << "Enter a number: "; 
-  
-    cin >> num; 
- 
-    for (i = 2; i <= num/2; i++) { 
-  
-        if (num % i == 0) { 
-            flag = 0; 
-            break; 
-        } 
-    } 
-  
-    if (num <= 1) 
-        flag = 0; 
-  
-    if (flag == 1) { 
-        cout << num << " is a prime number"; 
-    } 
-    else { 
-        cout << num << " is not a prime number"; 
-    } 
-  
-    return 0; 
-}
+Pseudocode
+
+BEGIN
+FUNCTION isPrime(n)
+  IF n <= 1
+    RETURN False
+  END IF
+        
+  FOR i = 2 TO n/2
+    IF n MOD i == 0
+      RETURN False
+    END IF
+  END FOR
+        
+  RETURN True
+END FUNCTION
+//Main function    
+INPUT number
+IF isPrime(number) == True
+    PRINT number is Prime
+ELSE
+    PRINT number is Not Prime
+END IF
+END
