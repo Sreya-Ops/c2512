@@ -1,16 +1,24 @@
 //Check odd or even 
+Pseudocode:
+BEGIN
+INPUT num
+IF num MOD 2==0
+    PRINT "EVEN"
+ELSE
+    PRINT "ODD"
+ENDIF
+END
+
+Code:
 #include <iostream>
 using namespace std;
 
 int main() {
     int num;
     cout << "Enter a number: "; 
-  
     cin >> num; 
-  
-    int output= num & 1;
 
-    if (output== 0)
+    if (num%2==0)
         cout << "Even";
 
     else
