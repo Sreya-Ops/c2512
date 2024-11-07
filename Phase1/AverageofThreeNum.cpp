@@ -1,24 +1,14 @@
 //Find the average of three numbers
-#include <iostream>
-using namespace std;
 
-int main()
-{
-    int a,b,c;
-    
-    cout<< "Enter a:";
-    cin>> a;
-    
-    cout<< "Enter b:";
-    cin>>b;
-    
-    cout<< "Enter c:";
-    cin>>c;
-    
-    float average;
-    average=float (a+b+c)/3;
-    
-    cout<< average;
+BEGIN
+FUNCTION Findaverage(num1,num2,num3)
+sum=num1+num2+num3
+average=sum/3
+RETURN average
+END FUNCTION
 
-    return 0;
-}
+//Main Function
+INPUT num1,num2,num
+average= Findaverage(num1,num2,num3)
+PRINT average
+    
