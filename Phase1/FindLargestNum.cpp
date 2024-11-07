@@ -1,5 +1,18 @@
 // Finding largest number
 
+Pseudocode
+BEGIN 
+INPUT n1,n2,n3
+IF n1 >= n2 AND n1 >= n3
+        PRINT n1 is the largest
+    ELSE IF n2 >= n1 AND n2 >= n3
+        PRINT n2 is the largest
+    ELSE
+        PRINT n3 is the largest
+    END IF
+END
+
+
 #include <iostream>
 using namespace std;
 
