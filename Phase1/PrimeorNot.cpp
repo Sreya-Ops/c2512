@@ -2,7 +2,7 @@
 
 Pseudo function:
 
-FUNCTION isPrime(number)
+FUNCTION isPrime(number->int)
   IF number <= 1
     RETURN False
   END IF
@@ -12,9 +12,7 @@ FUNCTION isPrime(number)
       RETURN False
     END IF
   END FOR
-        
- RETURN True
-END FUNCTION
+  RETURN True
 
 FUNCTION isPrimeTest()
 INPUT number
