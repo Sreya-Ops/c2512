@@ -3,10 +3,7 @@
 Pseudo functions:
 
 function isEven(number->int)->bool
-	if (number % 2 == 0) 
-		return true
-	endif
-	return false
+	return (number % 2 == 0) 
 	
 function isEvenTest()
 	input number
