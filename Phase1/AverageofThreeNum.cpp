@@ -1,14 +1,16 @@
 //Find the average of three numbers
+Pseudo Function:
 
-BEGIN
-FUNCTION Findaverage(num1,num2,num3)
-sum=num1+num2+num3
+FUNCTION findAverage(number1,number2,number3->int)
+sum=number1+number2+number3
 average=sum/3
 RETURN average
-END FUNCTION
 
-//Main Function
-INPUT num1,num2,num
-average= Findaverage(num1,num2,num3)
+FUNCTION findAverageTest()
+INPUT number1,number2,number3
+average= findAverage(number1,number2,number3)
 PRINT average
+
+Pseudocode:
+findAverageTest()
     
