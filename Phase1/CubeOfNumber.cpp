@@ -1,6 +1,6 @@
 //Find Cube of a number
 
-Pseudo function:
+Pseudo functions:
 
 function findCube(number->int)
     return number*number*number
