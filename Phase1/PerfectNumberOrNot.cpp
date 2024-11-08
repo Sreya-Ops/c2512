@@ -76,6 +76,7 @@ void isPerfectNumberTest(void)
 int main(void)
 {
     isPerfectNumberTest();
+ 
     return 0;
 }
  		
