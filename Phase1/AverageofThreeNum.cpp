@@ -1,7 +1,7 @@
 //Find the average of three numbers
 Pseudo Function:
 
-FUNCTION findAverage(number1,number2,number3->int)
+FUNCTION findAverage(number1,number2,number3)->int
 sum=number1+number2+number3
 average=sum/3
 RETURN average
