@@ -1,6 +1,6 @@
 //Check the number is prime or not
 
-Pseudo function:
+Pseudo functions:
 
 FUNCTION isPrime(number->int)
   IF number <= 1
