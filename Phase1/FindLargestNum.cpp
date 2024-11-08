@@ -1,9 +1,9 @@
 // Finding largest number
 
-Pseudo function:
+Pseudo functions:
 
 BEGIN
-FUNCTION findLargest(number1->, number2->, number3->) ->int
+FUNCTION findLargest(number1->int, number2->int, number3->int) ->int
 IF number1>=number2 AND number1>=number3
         RETURN number1
 ELSE IF number2>=number1 AND number2>=number3
