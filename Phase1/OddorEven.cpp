@@ -1,7 +1,7 @@
 //Check odd or even 
 Pseudofunction:
 BEGIN
-FUNCTION isOddOrEven(number)
+FUNCTION isOddOrEven(number->int)
     IF number MOD 2==0
     RETURN even
     ELSE
