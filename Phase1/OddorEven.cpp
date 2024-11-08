@@ -1,11 +1,11 @@
 //Check odd or even 
-Pseudofunction:
+Pseudofunctions:
 BEGIN
 FUNCTION isOddOrEven(number->int)
     IF number MOD 2==0
-    RETURN even
+        RETURN even
     ELSE
-    RETURN odd
+        RETURN odd
     END IF
 
 FUNCTION isOddOrEvenTest()
