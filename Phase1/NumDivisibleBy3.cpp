@@ -1,6 +1,6 @@
 //Number divisible by 3 or not
 
-Pseudo function:
+Pseudo functions:
 function isDivisibleByThree(number->)
     if number MOD 3==0
         return true
