@@ -10,7 +10,7 @@ FUNCTION isOddOrEven(number->int)
 
 FUNCTION isOddOrEvenTest()
 INPUT number
-Result=isOddOrrEven(number)
+int Result=isOddOrrEven(number)
 PRINT Result
 END
 
