@@ -33,8 +33,8 @@ function isPerfectNumber(number->int)->bool
 
 
 #include<iostream>
-using std :: cout;
-using std :: cin;
+using std::cout;
+using std::cin;
 
 
 bool isPerfectNumber(int number)
