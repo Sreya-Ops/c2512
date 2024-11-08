@@ -1,14 +1,14 @@
 //Check the number is prime or not
 
-Pseudo function
+Pseudo function:
 
-FUNCTION isPrime(n)
-  IF n <= 1
+FUNCTION isPrime(number)
+  IF number <= 1
     RETURN False
   END IF
         
-  FOR i = 2 TO n/2
-    IF n MOD i == 0
+  FOR i = 2.. number/2
+    IF number MOD i == 0
       RETURN False
     END IF
   END FOR
@@ -16,7 +16,7 @@ FUNCTION isPrime(n)
  RETURN True
 END FUNCTION
 
-function isPrimeTest()
+FUNCTION isPrimeTest()
 INPUT number
 IF isPrime(number) == True
     PRINT "Number is Prime"
@@ -24,5 +24,5 @@ ELSE
     PRINT "Number is Not Prime"
 END IF
 
-Pseudocode
+Pseudocode:
   isPrimeTest()
