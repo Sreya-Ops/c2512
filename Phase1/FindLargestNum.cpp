@@ -1,21 +1,23 @@
 // Finding largest number
 
-Pseudocode
+Pseudo function:
 
 BEGIN
-FUNCTION Findlargest(n1,n2,n3)
-IF n1>=n2 AND n1>=n3
-        RETURN n1
-ELSE IF n2>=n1 AND n2>=n3
-        RETURN n2
+FUNCTION findLargest(number1,number2,number3->int)
+IF number1>=number2 AND number1>=number3
+        RETURN number1
+ELSE IF number2>=number1 AND number2>=number3
+        RETURN number2
 ELSE 
-        RETURN n3
+        RETURN number3
 END IF
 END FUNCTION
 
-//Main function
-
-INPUT n1,n2,n3
-largest=Findlargest(n1,n2,n3)
+FUNCTION findLargestTest()
+INPUT number1,number2,number3
+int largest=findLargest(number1,number2,number3)
 PRINT largest
 END
+
+Pseudocode:
+findLargestTest()
