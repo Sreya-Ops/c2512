@@ -18,6 +18,7 @@ function isDivisibleByThreeTest()
 Pseudocode:
 isDivisibleByThreeTest()
 
+CODE:
 #include<iostream>
 using namespace std;
 
