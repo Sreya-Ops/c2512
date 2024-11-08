@@ -1,17 +1,19 @@
 //Check odd or even 
-Pseudocode:
-
+Pseudofunction:
 BEGIN
-FUNCTION OddorEven(n)
-    IF n MOD 2==0
+FUNCTION isOddOrEven(number)
+    IF number MOD 2==0
     RETURN even
     ELSE
     RETURN odd
     END IF
-END
 
-//Main Function
-INPUT n
-Result=OddorEven(n)
+FUNCTION isOddOrEvenTest()
+INPUT number
+Result=isOddOrrEven(number)
 PRINT Result
 END
+
+Pseudocode:
+isOddOrEvenTest()
+
