@@ -18,7 +18,8 @@ function findHighestNumberTest()
             print highestnum
 
 Pseudocode:
-findHighestNumberTest()
+
+  findHighestNumberTest()
 
 CODE:
 
@@ -49,8 +50,10 @@ void findHighestNumberTest(void)
     {
         cout << "Enter number " << i << " : ";
         cin >> number;
+      
         highestnum = findHighestNumber(number, highestnum);
     }
+  
     cout << "The highest number is: " << highestnum;
 }
 
