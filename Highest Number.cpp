@@ -15,6 +15,7 @@ function findHighestNumberTest()
         print i
 
         highestnum = findHighestNumber(number, highestnum)
+
             print highestnum
 
 Pseudocode:
