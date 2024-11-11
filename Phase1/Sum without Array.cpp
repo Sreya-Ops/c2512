@@ -7,8 +7,8 @@ function calculateSum(sum->int, number->int)
     return (sum + number)
 
 function calculateSumTest()
-
     input number
+
     totalSum = 0
 
     for i from 1 to 10
