@@ -12,10 +12,13 @@ function calculateSum(array->int)->int
 
 function calculateSumTest()
     input array of size 10
+    
     for i from 0 ..9
         print i
         input array[i]
+    
     totalSum = calculateSum(array)
+    
     print totalSum
 
 Pseudocode:
@@ -23,15 +26,18 @@ Pseudocode:
 calculateSumTest()
 
 #include<iostream>
-using namespace std;
+using std::cout;
+using std::cin;
 
 int calculateSum(int array[])
 {
     int sum = 0;
+    
     for (int i = 0; i < 10; i++)
     {
         sum = sum +array[i];
     }
+    
     return sum;
 }
 
@@ -44,6 +50,7 @@ void  calculateSumTest(void)
         cout << "Enter number " << (i + 1) << " : ";
         cin >> array[i];
     }
+    
     int totalSum = calculateSum(array);
 
     cout << " Sum of the numbers is " << totalSum;
