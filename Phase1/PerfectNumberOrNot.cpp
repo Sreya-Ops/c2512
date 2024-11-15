@@ -8,8 +8,8 @@ function isPerfectNumber(number->int)->bool
   half = (number / 2)
  	
   for i from 1 ..half
- 	    if (number % i == 0)
- 	        sum = (sum + i)
+ 	if (number % i == 0)
+ 	    sum = (sum + i)
       endif
   endfor
  	
