@@ -3,33 +3,32 @@
 Pseudofunctions:
 
 function isPerfectNumber(number->int)->bool
+    sum = 0
+    
+    half = (number / 2)
+ 	
+    for i from 1 ..half
+ 		     if (number % i == 0)
+ 			        sum = (sum + i)
+ 		     endif
+ 	  endfor
+ 	
+ 	  return (sum == number)
+ 	
+function isPerfectNumberTest()
+ 
+    input number
+ 	  bool result = isPerfectNumber(number)
+ 	
+ 	  if (result)
+ 	      print "The number is perfect"
+ 	  else
+ 	      print "The number is not perfect"
+ 	  endif
+ 	
+Pseudocode:
 
- 	sum = 0
- 	
- 	half = (number / 2)
- 	
- 	for i from 1 ..half
- 		if (number % i == 0)
- 			sum = sum + i
- 		endif
- 	endfor
- 	
- 	return (sum == number)
- 	
- function isPerfectNumberTest()
- 
- 	input number
- 	bool result = isPerfectNumber(number)
- 	
- 	if (result)
- 	    print "The number is perfect"
- 	else
- 	    print "The number is not perfect"
- 	endif
- 	
- Pseudocode:
- 
- isPerfectNumberTest()
+    isPerfectNumberTest()
 
 
 #include<iostream>
