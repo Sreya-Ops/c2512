@@ -1,15 +1,20 @@
 //Number divisible by 3 or not
 
 Pseudo functions:
+
 function isDivisibleByThree(number->)
+
     if number MOD 3==0
         return true
     endif
+
     return false
 	
 function isDivisibleByThreeTest()
     input number
+
     result=isDivisibleByThree(number)
+	
     if result
         print"The number is divisible by 3"
     else
@@ -20,29 +25,39 @@ isDivisibleByThreeTest()
 
 CODE:
 #include<iostream>
-using namespace std;
+using std::cout;
+using std::cin;
 
-bool isDivisibleByThree(int number){
-    if(number%3==0){
+bool isDivisibleByThree(int number)
+{
+    if(number%3==0)
+    {
         return true;
     }
     return false;
 }
 
-void isDivisibleByThreeTest(){
+void isDivisibleByThreeTest(void)
+{
     int number;
+	
     cout<< "Enter a Number:";
     cin>> number;
+	
     int result=isDivisibleByThree(number);
-    if(result){
+    if(result)
+    {
         cout<< "The number is divisible by 3";
     }
-    else{
+    else
+    {
         cout<< "The number is not divisible by 3";
     }
 }
 
-int main(){
+int main(void)
+{
     isDivisibleByThreeTest();
+	
     return 0;
 }
