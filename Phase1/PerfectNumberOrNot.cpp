@@ -10,7 +10,7 @@ function isPerfectNumber(number->int)->bool
   for i from 1 ..half
  	    if (number % i == 0)
  	        sum = (sum + i)
-          endif
+      endif
   endfor
  	
   return (sum == number)
