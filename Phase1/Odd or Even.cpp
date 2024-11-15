@@ -3,15 +3,17 @@
 Pseudo functions:
 
 function isEven(number->int)->bool
-	return (number % 2 == 0) 
+    return (number % 2 == 0) 
 	
 function isEvenTest()
-	input number
-	if (isEven(number))
-		print "The number is even"
-	else
-		print "The number is odd"
-	endif
+
+    input number
+
+    if (isEven(number))
+	print "The number is even"
+    else
+	print "The number is odd"
+    endif
 	
 pseudocode:
 
@@ -25,7 +27,7 @@ using std::cout;
 
 bool isEven(int number)
 {
-	return ((number % 2) == 0);
+    return ((number % 2) == 0);
 }
 
 void isEvenTest(void)
@@ -37,12 +39,12 @@ void isEvenTest(void)
     
     if (isEven(number))
     {
-		cout << number << " is even";
+	cout << number << " is even";
     }
-	else
-	{
-		cout << number << " is odd";
-	}
+    else
+    {
+	cout << number << " is odd";
+    }
 }
 
 int main(void)
