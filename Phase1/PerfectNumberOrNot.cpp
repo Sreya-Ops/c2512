@@ -22,9 +22,9 @@ function isPerfectNumber(number->int)->bool
  	bool result = isPerfectNumber(number)
  	
  	if (result)
- 		print "The number is perfect"
+ 	    print "The number is perfect"
  	else
- 		print "The number is not perfect"
+ 	    print "The number is not perfect"
  	endif
  	
  Pseudocode:
