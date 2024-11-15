@@ -64,11 +64,11 @@ void isPerfectNumberTest(void)
  	
  	if (result)
  	{
- 		cout << number << " is a perfect number";
+ 	    cout << number << " is a perfect number";
  	}
  	else
  	{
- 	  cout << number << " is not a perfect number";
+ 	    cout << number << " is not a perfect number";
  	}
 }
 
