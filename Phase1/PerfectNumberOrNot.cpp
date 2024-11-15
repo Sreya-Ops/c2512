@@ -68,7 +68,7 @@ void isPerfectNumberTest(void)
  	}
  	else
  	{
- 	    cout << number << " is not a perfect number";
+ 	  cout << number << " is not a perfect number";
  	}
 }
 
