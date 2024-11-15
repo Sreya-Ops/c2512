@@ -8,12 +8,12 @@ function isPerfectNumber(number->int)->bool
   half = (number / 2)
  	
   for i from 1 ..half
- 	if (number % i == 0)
- 		sum = (sum + i)
-    endif
+ 	 if (number % i == 0)
+ 	  sum = (sum + i)
+   endif
   endfor
  	
- 	  return (sum == number)
+  return (sum == number)
  	
 function isPerfectNumberTest()
  
