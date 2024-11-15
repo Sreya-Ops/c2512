@@ -3,15 +3,15 @@
 Pseudofunctions:
 
 function isPerfectNumber(number->int)->bool
-    sum = 0
+  sum = 0
     
-    half = (number / 2)
+  half = (number / 2)
  	
-    for i from 1 ..half
- 		     if (number % i == 0)
- 			        sum = (sum + i)
- 		     endif
- 	  endfor
+  for i from 1 ..half
+ 	if (number % i == 0)
+ 		sum = (sum + i)
+    endif
+  endfor
  	
  	  return (sum == number)
  	
