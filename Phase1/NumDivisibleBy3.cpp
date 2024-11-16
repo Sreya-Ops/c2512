@@ -2,9 +2,9 @@
 
 Pseudo functions:
 
-function isDivisibleByThree(number->)
+function isDivisibleByThree(number->int)->bool
 
-    if number MOD 3==0
+    if (number MOD 3 == 0)
         return true
     endif
 
@@ -30,7 +30,7 @@ using std::cin;
 
 bool isDivisibleByThree(int number)
 {
-    if(number%3==0)
+    if(number % 3 == 0)
     {
         return true;
     }
