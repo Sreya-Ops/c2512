@@ -77,7 +77,9 @@ CREATE TABLE booking_details (
     total_ticket_amount NUMBER NOT NULL,
     total_meal_amount NUMBER NOT NULL,
     total_baggage_amount NUMBER NOT NULL,
-    payment_mode VARCHAR2(50) NOT NULL
+    payment_mode VARCHAR2(50) NOT NULL,
+    FOREIGN KEY (customer_id) REFERENCES customer_details(customer_id),
+    FOREIGN KEY (flight_id) REFERENCES flight_details(flight_id)
 );
 
 -- Booking Seats Table
@@ -85,7 +87,8 @@ CREATE TABLE booking_seat (
     seat_id NUMBER PRIMARY KEY,
     seat_number VARCHAR2(10) NOT NULL,
     seat_price NUMBER NOT NULL,
-    booking_id NUMBER NOT NULL
+    booking_id NUMBER NOT NULL,
+    FOREIGN KEY (booking_id) REFERENCES booking_details(booking_id)
 );
 
 -- Booking Meals Table
@@ -95,7 +98,8 @@ CREATE TABLE booking_meal (
     meal_price NUMBER NOT NULL,
     meal_qty NUMBER NOT NULL,
     meal_amount NUMBER NOT NULL,
-    booking_id NUMBER NOT NULL
+    booking_id NUMBER NOT NULL,
+    FOREIGN KEY (booking_id) REFERENCES booking_details(booking_id)
 );
 
 --  Baggage Table
@@ -103,7 +107,8 @@ CREATE TABLE baggage (
     baggage_id NUMBER PRIMARY KEY,
     baggage_weight NUMBER NOT NULL,
     baggage_price NUMBER NOT NULL,
-    booking_id NUMBER NOT NULL
+    booking_id NUMBER NOT NULL,
+    FOREIGN KEY (booking_id) REFERENCES booking_details(booking_id)
 );
 
 -- Airport Table
