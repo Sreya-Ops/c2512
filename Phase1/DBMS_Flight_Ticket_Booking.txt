@@ -218,7 +218,7 @@ Booking Table:
 
 booking_id	booking_number	customer_id	flight_id	seat_class	total_ticket_amount	total_meal_amount	total_baggage_amount	payment_mode
 10	        BKN001	        1	        101	        Economy	        31500	                4200	                5500	                Credit Card
-20	        BKN002	        1	        201	        Economy	        6400	                1350	                2500	                Debit Card
+20	        BKN002	        2	        201	        Economy	        6400	                1350	                2500	                Debit Card
 
 Booking Seat Table:
 
