@@ -273,7 +273,7 @@ Solution:
 --Add Aadhar_id to customer_details table
 
 ALTER TABLE customer
-ADD aadhar_id VARCHAR2(12) NOT NULL;
+ADD aadhar_id NUMBER NOT NULL;
 
 --Add departure_time column to the flight_details table
 
@@ -289,16 +289,18 @@ ADD arrival_time TIMESTAMP NOT NULL;
 
 --Update customer_details table
 
-UPDATE customer
+UPDATE customer_details
 SET aadhar_id = '123456789012' 
 WHERE customer_id = 1;
 
-UPDATE flight
+-- Update flight_details table
+
+UPDATE flight_details
 SET departure_time = TO_TIMESTAMP('2024-12-10 06:00:00', 'YYYY-MM-DD HH24:MI:SS'),
     arrival_time = TO_TIMESTAMP('2024-12-10 08:30:00', 'YYYY-MM-DD HH24:MI:SS')
 WHERE flight_number = 'AI302';
 
-UPDATE flight
+UPDATE flight_details
 SET departure_time = TO_TIMESTAMP('2024-12-12 08:30:00', 'YYYY-MM-DD HH24:MI:SS'),
     arrival_time = TO_TIMESTAMP('2024-12-12 10:45:00', 'YYYY-MM-DD HH24:MI:SS')
 WHERE flight_number = '6E705';
