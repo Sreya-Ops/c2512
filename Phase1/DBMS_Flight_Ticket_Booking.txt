@@ -52,14 +52,14 @@ Baggage Details: Baggage 1: 15 kg @ Rs. 1000,Baggage 2: 20 kg @ Rs. 1500
 Table creation:
 
 -- Customer Table
-CREATE TABLE customer (
+CREATE TABLE customer_details (
     customer_id NUMBER PRIMARY KEY,
     customer_name VARCHAR2(100) NOT NULL,
     customer_address VARCHAR2(255) NOT NULL
 );
 
 -- Flight Table
-CREATE TABLE flight (
+CREATE TABLE flight_details (
     flight_id NUMBER PRIMARY KEY,
     flight_number VARCHAR2(20) NOT NULL,
     flight_name VARCHAR2(100) NOT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE flight (
 );
 
 -- Booking Table
-CREATE TABLE booking (
+CREATE TABLE booking_details (
     booking_id NUMBER PRIMARY KEY,
     booking_number VARCHAR2(20) NOT NULL,
     customer_id NUMBER NOT NULL,
