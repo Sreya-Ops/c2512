@@ -290,7 +290,7 @@ ADD arrival_time TIMESTAMP NOT NULL;
 --Update customer_details table
 
 UPDATE customer_details
-SET aadhar_id = '123456789012' 
+SET aadhar_id = 123456789012
 WHERE customer_id = 1;
 
 -- Update flight_details table
