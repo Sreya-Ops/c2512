@@ -123,18 +123,20 @@ Insertion:
 -- Insert Data into Customer details Table
 INSERT INTO customer_details (customer_id, customer_name, customer_address) VALUES (1, 'Sreya', 'Palakkad');
 
--- Insert Data into Flight details Table
-INSERT INTO flight_details (flight_id, flight_number, flight_name, departure_airport, arrival_airport, departure_time, arrival_time)
-VALUES (101, 'AI302', 'Air India 302', 'Cochin International Airport', 'Indira Gandhi International Airport', TO_TIMESTAMP('2024-12-10 06:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-12-10 08:30:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO customer_details (customer_id, customer_name, customer_address) VALUES (2, 'Sreya', 'Kochi');
 
-INSERT INTO flight_details (flight_id, flight_number, flight_name, departure_airport, arrival_airport, departure_time, arrival_time)
-VALUES (201, '6E705', 'Indigo 705', 'Rajiv Gandhi International Airport', 'Trivandrum International Airport', TO_TIMESTAMP('2024-12-12 08:30:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-12-12 10:45:00', 'YYYY-MM-DD HH24:MI:SS'));
+-- Insert Data into Flight details Table
+INSERT INTO flight_details (flight_id, flight_number, flight_name, departure_airport, arrival_airport)
+VALUES (101, 'AI302', 'Air India 302', 'Cochin International Airport', 'Indira Gandhi International Airport');
+
+INSERT INTO flight_details (flight_id, flight_number, flight_name, departure_airport, arrival_airport)
+VALUES (201, '6E705', 'Indigo 705', 'Rajiv Gandhi International Airport', 'Trivandrum International Airport');
 
 -- Insert Data into Booking details Table
 INSERT INTO booking_details (booking_id, booking_number, customer_id, flight_id, seat_class, total_ticket_amount, total_meal_amount, total_baggage_amount, payment_mode)
 VALUES (10, 'BKN0010', 1, 101, 'Economy', 31500, 4200, 5500, 'Credit Card');
 INSERT INTO booking_details (booking_id, booking_number, customer_id, flight_id, seat_class, total_ticket_amount, total_meal_amount, total_baggage_amount, payment_mode)
-VALUES (20, 'BKN0020', 1, 201, 'Economy', 6400, 1350, 2500, 'Debit Card');
+VALUES (20, 'BKN0020', 2 , 201, 'Economy', 6400, 1350, 2500, 'Debit Card');
 
 -- Insert Data into Booking Seats Table
 INSERT INTO booking_seat (seat_id, seat_number, seat_price, booking_id)
@@ -204,13 +206,13 @@ Customer table:
 
 customer_id	customer_name	customer_address
 1		Sreya	        Palakkad
-			
+2		Sreya	        Kochi
 
 Flight Table:
 
-flight_id	flight_number	flight_name	departure_airport	                arrival_airport	                        departure_time	        arrival_time
-101		AI302		Air India 302	Cochin International Airport		Indira Gandhi International Airport	2024-12-10 06:00:00	2024-12-10 08:30:00
-201		6E705		Indigo 705	Rajiv Gandhi International Airport	Trivandrum International Airport	2024-12-12 08:30:00	2024-12-12 10:45:00
+flight_id	flight_number	flight_name	departure_airport	                arrival_airport	                        	        
+101		AI302		Air India 302	Cochin International Airport		Indira Gandhi International Airport		
+201		6E705		Indigo 705	Rajiv Gandhi International Airport	Trivandrum International Airport	
 
 Booking Table:
 
