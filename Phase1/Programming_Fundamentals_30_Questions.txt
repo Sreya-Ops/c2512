@@ -6,7 +6,7 @@
 pseudofunctions:
 
 function findAverage(number1, number2) -> int
-	average = (number1 + number2) / 2
+	average = ((number1 + number2) / 2)
     	return average
 
 function findAverageTest()
@@ -166,7 +166,7 @@ swapNumsTest()
 #include <iostream>
 using namespace std;
 
-void swapNums(int &num1,int &num2){
+void swapNums(int& num1,int& num2){
     int temp=num1;
     num1=num2;
     num2=temp;
@@ -206,9 +206,9 @@ function isDivisibleBy3Test()
     result = isDivisibleBy3(number)
 
     if result
-        print "The number", number, "is divisible by 3."
+        print "The number is divisible by 3."
     else
-        print "The number", number, "is not divisible by 3."
+        print "The number is not divisible by 3."
     end if
 end function
 
@@ -480,16 +480,16 @@ pseudo function:
 function isArmstrong(number -> int) -> bool
 	copyNumber = number
 	int counter = 0
-	while copyNumber > 0
+	while (copyNumber > 0)
 		copyNumber = copyNumber/10
 		counter = counter + 1
 	end while
 	copyNumber = number
 	int sum = 0
-	while copyNumber > 0
-		temp = copyNumber % 10
-		sum = sum + temp^counter
-		copyNumber = copyNumber / 10
+	while (copyNumber > 0)
+		temp = (copyNumber % 10)
+		sum = (sum + temp^counter)
+		copyNumber = (copyNumber / 10)
 	end while
 	if sum == number
 		return true
@@ -514,7 +514,7 @@ isArmStrongTest()
 #include <cmath>
 using namespace std;
 
-bool swapNums(int number){
+bool isArmstrong(int number){
     int copyNumber=number;
     int counter=0;
     while (copyNumber>0){
@@ -538,7 +538,7 @@ void isArmstrongTest(){
     int num;
     cout << "Enter number:";
     cin >> num;
-    bool result=swapNums(num);
+    bool result=isArmstrong(num);
     if (result ==true){
         cout << "Armstrong number";
     }
