@@ -525,7 +525,7 @@ bool isArmstrong(int number){
 	int sum = 0;
 	while (copyNumber > 0){
 		int temp = copyNumber % 10;
-		sum = sum + (int)pow(temp,counter);
+		sum = (sum + (int)pow(temp,counter));
 		copyNumber = copyNumber / 10;
 	}
 	if (sum == number){
