@@ -3,7 +3,6 @@
 #include <iomanip>
 using namespace std;
 
-// Constants
 #define MAX_BOOKINGS 100
 
 // Global variable for auto-increment booking ID
