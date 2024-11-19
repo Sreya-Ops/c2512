@@ -2058,10 +2058,6 @@ function findSumOfOddTemperature(temperature->[int] , size ->int)->int
 function find2ndMaxOddTemperature(temperature->[int] , size ->int)->int
 
 
-
-
-
-
 function readTemperature(temperatures->[int],size->int&)
        
        input i=0
@@ -2091,10 +2087,6 @@ function findTemperatureAverage(TemperatureSum->int , size ->int)->int
         return (TemperatureSum/size);
 end function
 
-
-
-
-
 function isPrimeTemperture(currentTemperature -> [int]) - bool
 
     if (currentTemperature <= 1)
@@ -2120,9 +2112,6 @@ function findPrimeTemperatureSum(temperatures -> [int], size -> [int]) -> [int]
     end for
 
     return sum
-
-
-
 
 function isOddTemperature(number -> int) -> bool
 
@@ -2151,10 +2140,6 @@ function findSumOfOddTemperature(temperature->[int] , size ->int)->int
 end function
 
 
-
-
-
-
 function isNumberMinimum3Digit( temperature -> [int] , size -> int , qualify -> [int]) -> bool
     count = 0
     for i in temperatures
@@ -2168,10 +2153,6 @@ function findMin3DigitSum( qualify -> [int], count -> int ) ->int
     for i in qualify
         sum += qualify[i]
     return sum
-
-
-
-
 
 
 function find2ndMaxOddTemperature(temperatures[]-->int, size-->int)-->int
@@ -2353,12 +2334,6 @@ int findMin3DigitSum( int qualify[], int count )
     }
     return sum;
 }
-
-
-
-
-
-
 
 //athira
 
@@ -2577,8 +2552,6 @@ void readTemperature(int& temperatures,int& size,int& min)
         }
           while(currentTemperature!=0); 
 }  
-
-
 
 int findTemperatureAverage(int temperatures , int size)
 {
