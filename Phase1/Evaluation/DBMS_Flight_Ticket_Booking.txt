@@ -14,7 +14,7 @@ flight_reservations UNF Table
 NF Table
 
 Customer Table	    :  	customer_id, customer_name, customer_address
-Flight Table  	    :  	flight_id, flight_number, flight_name, departure_airport, arrival_airport, departure_time, arrival_time
+Flight Table  	    :  	flight_id, flight_number, flight_name, departure_airport, arrival_airport
 Booking Table 	    :  	booking_id, booking_number, customer_id, flight_id, seat_class, total_ticket_amount, 
 		 	total_meal_amount, total_baggage_amount, payment_mode
 Booking Seats Table : 	seat_id, seat_number, seat_price, booking_id
@@ -52,25 +52,23 @@ Baggage Details: Baggage 1: 15 kg @ Rs. 1000,Baggage 2: 20 kg @ Rs. 1500
 Table creation:
 
 -- Customer Table
-CREATE TABLE customer (
+CREATE TABLE customer_details (
     customer_id NUMBER PRIMARY KEY,
     customer_name VARCHAR2(100) NOT NULL,
     customer_address VARCHAR2(255) NOT NULL
 );
 
 -- Flight Table
-CREATE TABLE flight (
+CREATE TABLE flight_details (
     flight_id NUMBER PRIMARY KEY,
     flight_number VARCHAR2(20) NOT NULL,
     flight_name VARCHAR2(100) NOT NULL,
     departure_airport VARCHAR2(100) NOT NULL,
     arrival_airport VARCHAR2(100) NOT NULL,
-    departure_time TIMESTAMP NOT NULL,
-    arrival_time TIMESTAMP NOT NULL
 );
 
 -- Booking Table
-CREATE TABLE booking (
+CREATE TABLE booking_details (
     booking_id NUMBER PRIMARY KEY,
     booking_number VARCHAR2(20) NOT NULL,
     customer_id NUMBER NOT NULL,
@@ -80,8 +78,8 @@ CREATE TABLE booking (
     total_meal_amount NUMBER NOT NULL,
     total_baggage_amount NUMBER NOT NULL,
     payment_mode VARCHAR2(50) NOT NULL,
-    FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
-    FOREIGN KEY (flight_id) REFERENCES flight(flight_id)
+    FOREIGN KEY (customer_id) REFERENCES customer_details(customer_id),
+    FOREIGN KEY (flight_id) REFERENCES flight_details(flight_id)
 );
 
 -- Booking Seats Table
@@ -90,7 +88,7 @@ CREATE TABLE booking_seat (
     seat_number VARCHAR2(10) NOT NULL,
     seat_price NUMBER NOT NULL,
     booking_id NUMBER NOT NULL,
-    FOREIGN KEY (booking_id) REFERENCES booking(booking_id)
+    FOREIGN KEY (booking_id) REFERENCES booking_details(booking_id)
 );
 
 -- Booking Meals Table
@@ -101,7 +99,7 @@ CREATE TABLE booking_meal (
     meal_qty NUMBER NOT NULL,
     meal_amount NUMBER NOT NULL,
     booking_id NUMBER NOT NULL,
-    FOREIGN KEY (booking_id) REFERENCES booking(booking_id)
+    FOREIGN KEY (booking_id) REFERENCES booking_details(booking_id)
 );
 
 --  Baggage Table
@@ -110,7 +108,7 @@ CREATE TABLE baggage (
     baggage_weight NUMBER NOT NULL,
     baggage_price NUMBER NOT NULL,
     booking_id NUMBER NOT NULL,
-    FOREIGN KEY (booking_id) REFERENCES booking(booking_id)
+    FOREIGN KEY (booking_id) REFERENCES booking_details(booking_id)
 );
 
 -- Airport Table
@@ -125,18 +123,20 @@ Insertion:
 -- Insert Data into Customer details Table
 INSERT INTO customer_details (customer_id, customer_name, customer_address) VALUES (1, 'Sreya', 'Palakkad');
 
--- Insert Data into Flight details Table
-INSERT INTO flight_details (flight_id, flight_number, flight_name, departure_airport, arrival_airport, departure_time, arrival_time)
-VALUES (101, 'AI302', 'Air India 302', 'Cochin International Airport', 'Indira Gandhi International Airport', TO_TIMESTAMP('2024-12-10 06:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-12-10 08:30:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO customer_details (customer_id, customer_name, customer_address) VALUES (2, 'Sruthi', 'Kochi');
 
-INSERT INTO flight_details (flight_id, flight_number, flight_name, departure_airport, arrival_airport, departure_time, arrival_time)
-VALUES (201, '6E705', 'Indigo 705', 'Rajiv Gandhi International Airport', 'Trivandrum International Airport', TO_TIMESTAMP('2024-12-12 08:30:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-12-12 10:45:00', 'YYYY-MM-DD HH24:MI:SS'));
+-- Insert Data into Flight details Table
+INSERT INTO flight_details (flight_id, flight_number, flight_name, departure_airport, arrival_airport)
+VALUES (101, 'AI302', 'Air India 302', 'Cochin International Airport', 'Indira Gandhi International Airport');
+
+INSERT INTO flight_details (flight_id, flight_number, flight_name, departure_airport, arrival_airport)
+VALUES (201, '6E705', 'Indigo 705', 'Rajiv Gandhi International Airport', 'Trivandrum International Airport');
 
 -- Insert Data into Booking details Table
 INSERT INTO booking_details (booking_id, booking_number, customer_id, flight_id, seat_class, total_ticket_amount, total_meal_amount, total_baggage_amount, payment_mode)
 VALUES (10, 'BKN0010', 1, 101, 'Economy', 31500, 4200, 5500, 'Credit Card');
 INSERT INTO booking_details (booking_id, booking_number, customer_id, flight_id, seat_class, total_ticket_amount, total_meal_amount, total_baggage_amount, payment_mode)
-VALUES (20, 'BKN0020', 1, 201, 'Economy', 6400, 1350, 2500, 'Debit Card');
+VALUES (20, 'BKN0020', 2 , 201, 'Economy', 6400, 1350, 2500, 'Debit Card');
 
 -- Insert Data into Booking Seats Table
 INSERT INTO booking_seat (seat_id, seat_number, seat_price, booking_id)
@@ -206,19 +206,19 @@ Customer table:
 
 customer_id	customer_name	customer_address
 1		Sreya	        Palakkad
-			
+2		Sruthi	        Kochi
 
 Flight Table:
 
-flight_id	flight_number	flight_name	departure_airport	                arrival_airport	                        departure_time	        arrival_time
-101		AI302		Air India 302	Cochin International Airport		Indira Gandhi International Airport	2024-12-10 06:00:00	2024-12-10 08:30:00
-201		6E705		Indigo 705	Rajiv Gandhi International Airport	Trivandrum International Airport	2024-12-12 08:30:00	2024-12-12 10:45:00
+flight_id	flight_number	flight_name	departure_airport	                arrival_airport	                        	        
+101		AI302		Air India 302	Cochin International Airport		Indira Gandhi International Airport		
+201		6E705		Indigo 705	Rajiv Gandhi International Airport	Trivandrum International Airport	
 
 Booking Table:
 
 booking_id	booking_number	customer_id	flight_id	seat_class	total_ticket_amount	total_meal_amount	total_baggage_amount	payment_mode
 10	        BKN001	        1	        101	        Economy	        31500	                4200	                5500	                Credit Card
-20	        BKN002	        1	        201	        Economy	        6400	                1350	                2500	                Debit Card
+20	        BKN002	        2	        201	        Economy	        6400	                1350	                2500	                Debit Card
 
 Booking Seat Table:
 
@@ -280,7 +280,7 @@ Solution:
 --Add Aadhar_id to customer_details table
 
 ALTER TABLE customer
-ADD aadhar_id VARCHAR2(12) NOT NULL;
+ADD aadhar_id NUMBER NOT NULL;
 
 --Add departure_time column to the flight_details table
 
@@ -296,16 +296,18 @@ ADD arrival_time TIMESTAMP NOT NULL;
 
 --Update customer_details table
 
-UPDATE customer
-SET aadhar_id = '123456789012' 
+UPDATE customer_details
+SET aadhar_id = 123456789012
 WHERE customer_id = 1;
 
-UPDATE flight
+-- Update flight_details table
+
+UPDATE flight_details
 SET departure_time = TO_TIMESTAMP('2024-12-10 06:00:00', 'YYYY-MM-DD HH24:MI:SS'),
     arrival_time = TO_TIMESTAMP('2024-12-10 08:30:00', 'YYYY-MM-DD HH24:MI:SS')
 WHERE flight_number = 'AI302';
 
-UPDATE flight
+UPDATE flight_details
 SET departure_time = TO_TIMESTAMP('2024-12-12 08:30:00', 'YYYY-MM-DD HH24:MI:SS'),
     arrival_time = TO_TIMESTAMP('2024-12-12 10:45:00', 'YYYY-MM-DD HH24:MI:SS')
 WHERE flight_number = '6E705';
@@ -378,7 +380,6 @@ SELECT SUM(meal_amount) AS total_meal_amount
 FROM booking_meals
 WHERE booking_id IN (SELECT booking_id FROM booking_details
                      WHERE seat_class = 'Economy');
-
 
 
 
