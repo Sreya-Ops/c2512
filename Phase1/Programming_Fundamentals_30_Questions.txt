@@ -662,6 +662,7 @@ function isPerfectNumber(number->int)->bool
 function isPerfectNumberTest()
  
     input number
+
  	  bool result = isPerfectNumber(number)
  	
  	  if (result)
@@ -885,7 +886,7 @@ using std::endl;
 
 bool isPerfectSquare(int number) 
 {
-	int root = (sqrt(number)); 
+	int root = ((int)sqrt(number)); 
     
     	return (root * root == number); 
 }
@@ -917,15 +918,15 @@ int main(void)
 }
 
 ------------------------------------------------Question 15------------------------------------------
-15. Reverse the number.  
+// Reverse the number.  
     pseudofunctions:
     function reverseInteger(num -> int) -> int
         reversed = 0
 
-        while num != 0
+        while (num != 0)
             digit = num % 10           
-            reversed = reversed * 10 + digit 
-            num = num / 10             
+            reversed = ((reversed * 10) + digit) 
+            num = (num / 10)             
         end while
 
         return reversed
@@ -951,8 +952,8 @@ int main(void)
         int reversed = 0;
 
         while (num != 0) {
-            int digit = num % 10;            
-            reversed = reversed * 10 + digit; 
+            int digit = (num % 10);            
+            reversed = ((reversed * 10) + digit); 
             num /= 10;                       
         }
 
@@ -982,7 +983,7 @@ int main(void)
 
 pseudo functions:
 
-function factorial(number-> int) -> int
+function findFactorial(number-> int) -> int
     if (number < 0)
         return -1
 
@@ -1025,12 +1026,12 @@ int factorial(int number) {
     return result;
 }
 
-void factorialTest() {
+void findFactorialTest() {
     int number;
     cout << "Enter a number: ";
     cin >> number;
 
-    int result = factorial(number);
+    int result = findFactorial(number);
 
     if (result == -1) {
         cout << "Invalid number" << endl;
@@ -1040,7 +1041,7 @@ void factorialTest() {
 }
 
 int main() {
-    factorialTest(); 
+    findFactorialTest(); 
     return 0;
 }
 
@@ -1048,7 +1049,7 @@ int main() {
 
 //Fibonacci series
 //Pseudocode:
-function fibonacciNumbers(n -> [int], arrStore -> [int]) -> null
+function findFibonacciNumbers(n -> [int], arrStore -> [int]) -> null
     if (n >= 1)
         arrStore[0] = 0
     end if
@@ -1067,9 +1068,9 @@ function fibonacciNumbers(n -> [int], arrStore -> [int]) -> null
         first = second
         second = next
     end for
-end fibonacciNumbers
+end findFibonacciNumbers
 
-function fibonacciNumbersTest(void)
+function findFibonacciNumbersTest(void)
     input n
     
     if (n < 1)
@@ -1084,16 +1085,16 @@ function fibonacciNumbersTest(void)
     
     int arrStore[MAX_SIZE] = {}
     
-    fibonacciNumbers(n, arrStore)
+    findFibonacciNumbers(n, arrStore)
     
     for (i = 0; i < n; i++)
         print arrStore[i] 
     end for
-end fibonacciNumbersTest
+end findFibonacciNumbersTest
 
 start 
 main()
-    fibonacciNumbersTest()
+    findFibonacciNumbersTest()
 
     return EXIT_SUCCESS
 end 
@@ -1171,7 +1172,7 @@ Function isPrime(number->int)->bool
 
     for i from 2 ..sqrt(number)
 
-        if number % i == 0
+        if (number % i == 0)
 
             Return False
 
@@ -1560,7 +1561,7 @@ int main(void)
 
 ------------------------------------------------Question 23------------------------------------------
 
-// to display the duplicate numbers in the array. [Josh]
+// to display the duplicate numbers in the array
 // pseudo code
 
 pseudo function:
