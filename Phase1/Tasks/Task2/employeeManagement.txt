@@ -1,0 +1,182 @@
+Problem Statement: `Employee Salary Management System`
+
+`Objective`:  
+You need to develop a C++ program that performs the following tasks:
+
+1. `Input an Array of Salaries`:
+   - The program should take input for the salaries of `10 employees` 
+   (you can modify the number as required).
+   - The program should store these salaries in an array.
+
+2. `Find the Second Highest Salary`:
+   - Implement a function to find the second highest salary in the array.
+
+3. `Check if the Second Highest Salary is Exactly 5 Digits`:
+   - After identifying the second highest salary, 
+   check whether the salary is a 5-digit number (between 10000 and 99999).
+   - Print a message indicating 
+   whether the second highest salary is 5 digits or not.
+
+4. `Print All Salaries`:
+   - Implement a function 
+   to print all employee salaries stored in the array.
+
+`Modular Approach`:
+- Break the problem into multiple functions:
+  - A function for `inputting the salaries`.
+  - A function for `finding the second highest salary`.
+  - A function for `checking if the salary is 5 digits`.
+  - A function for `printing all salaries`.
+
+1.Create a C++ file named salary_manag.cpp:
+    ------
+    touch file_name  => touch salary_manag.cpp
+    ------
+    This will create a new file named `salary_manag.cpp` in the current directory.
+
+----------------------------------------------------------------------------------------------------------------
+
+2.  Write a simple C++ program`:
+    Create the `salary_manag.cpp` file to develop a C++ program that performs the required tasks
+    using vim editor:
+    
+    ------------------
+    vim salary_manag.cpp
+    ------------------
+    Write the code in the vim editor and after finishing save and exit from the editor using ':wq'
+    
+-------------------------------------------------------------------------------------------------------------
+
+3.Using `cat` to View File Content`:
+
+    `View the contents of the file`:
+    ------------
+    cat salary_manag.cpp
+    ------------
+    This will display the content of `salary_manag.cpp` in the terminal.
+    
+
+#include<iostream>
+#include<climits>
+using namespace std;
+
+void readSalaries(int salaries[], int number) {
+	cout << "Enter Salaries of " << number << "employees:" << endl;;
+	for (int i = 0; i < number; i++){
+		cout << "Salary of Employee " << (i+1) << ":";
+		cin >> salaries[i];
+	}
+}
+
+int findSecondHighest(int salaries[], int number) {
+       if (number < 2) {
+	       cout << " Not enough data " << endl;
+	       return -1;
+	}
+       
+       int highest = INT_MIN, secondHighest = INT_MIN;
+
+       for (int i = 0;i< number;i++) {
+	       if (salaries[i] > highest) {
+		       secondHighest = highest;
+		       highest = salaries[i];
+		}
+	       else if(salaries[i] > secondHighest && salaries[i] < highest) {
+		       secondHighest = salaries[i];
+	       }
+	       
+	}
+
+       if (secondHighest == INT_MIN) {
+	       return -1;
+	}
+       return secondHighest;
+}
+
+bool isFiveDigitNumber(int salary){
+	return salary >= 1000 && salary <= 99999;
+}
+
+void printSalaries(int salaries[], int number) {
+	cout << "Employee salaries are:" << endl;
+	for (int i = 0; i < number ; i++){
+		cout << salaries[i] << " ";
+	}
+	cout << endl;
+}
+
+void Test () {
+	int number = 10;
+	int salaries[number];
+
+	readSalaries(salaries, number);
+
+	printSalaries(salaries, number);
+
+	int secondHighest = findSecondHighest(salaries, number);
+
+	if (secondHighest == -1) {
+		cout <<" unable to determine" << endl;
+	}
+	else{
+		cout << "Second Highest salary is " << secondHighest << endl;
+	}
+
+	if(isFiveDigitNumber(secondHighest)) {
+		cout << "Second highest salary is a 5 digit value" << endl;
+	}
+	else {
+		cout << "Second Highest salary is not a 5 digit value" << endl;
+	}
+}
+
+int main() {
+	Test();
+
+	return 0;
+
+}
+
+-------------------------------------------------------------------------------------------------------
+
+4.Compile the C++ program:
+    ```bash
+    g++ salary_manag.cpp
+    ```
+    This compiles `salary_manag.cpp`
+
+--------------------------------------------------------------------------------------------------------
+
+5.  Run the compiled program`:
+    --------
+    ./a.out
+    --------
+    The output should be:
+    ```
+   Enter Salaries of 10employees:
+   Salary of Employee 1:5000
+   Salary of Employee 2:80000
+   Salary of Employee 3:34999
+   Salary of Employee 4:20000
+   Salary of Employee 5:700000
+   Salary of Employee 6:5000
+   Salary of Employee 7:4000
+   Salary of Employee 8:5000
+   Salary of Employee 9:3000
+   Salary of Employee 10:2000
+   Employee salaries are:
+   5000 80000 34999 20000 700000 5000 4000 5000 3000 2000 
+   Second Highest salary is 80000
+   Second highest salary is a 5 digit value
+   
+   ----------------------------------------------------------------------------------------------------
+   
+   By following this problem statement, 
+you will be able to learn:
+- `C++ programming` concepts such as 
+arrays, functions, and branching statements.
+- How to work with `Linux commands` 
+for file handling, compiling, and running C++ programs.
+- How to use the `vi editor` 
+for editing C++ code.
+
