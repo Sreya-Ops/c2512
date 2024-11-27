@@ -28,7 +28,25 @@ You need to develop a C++ program that performs the following tasks:
   - A function for `checking if the salary is 5 digits`.
   - A function for `printing all salaries`.
 
-1.Create a C++ file named salary_manag.cpp:
+1.  Basic File and directory management
+
+    Create a directory called 'Employee_salary' for your C++ project`:
+    -----
+    mkdir project_name    => mkdir Employee_salary
+    -----
+    This will create a new directory called `Employee_salary`.
+
+-----------------------------------------------------------------------------------------------------------------
+
+2.  Change to the project directory:
+    -----
+    cd project_name  => cd Employee_salary
+    -----
+    This will move you into the 'Employee_salary' directory.
+
+-------------------------------------------------------------------------------------------------------------------
+
+3.Create a C++ file named salary_manag.cpp:
     ------
     touch file_name  => touch salary_manag.cpp
     ------
@@ -36,7 +54,7 @@ You need to develop a C++ program that performs the following tasks:
 
 ----------------------------------------------------------------------------------------------------------------
 
-2.  Write a simple C++ program`:
+4.  Write a simple C++ program`:
     Create the `salary_manag.cpp` file to develop a C++ program that performs the required tasks
     using vim editor:
     
@@ -47,7 +65,7 @@ You need to develop a C++ program that performs the following tasks:
     
 -------------------------------------------------------------------------------------------------------------
 
-3.Using `cat` to View File Content`:
+5.Using `cat` to View File Content`:
 
     `View the contents of the file`:
     ------------
@@ -139,7 +157,7 @@ int main() {
 
 -------------------------------------------------------------------------------------------------------
 
-4.Compile the C++ program:
+6.Compile the C++ program:
     ```bash
     g++ salary_manag.cpp
     ```
@@ -147,7 +165,7 @@ int main() {
 
 --------------------------------------------------------------------------------------------------------
 
-5.  Run the compiled program`:
+7.  Run the compiled program`:
     --------
     ./a.out
     --------
