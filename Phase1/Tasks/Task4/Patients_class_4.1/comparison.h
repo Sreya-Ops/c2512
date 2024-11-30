@@ -4,6 +4,7 @@
 
 class Comparisons
 {
+	public:
 	static bool Equals(const Patients& first, const Patients& second);
 	static bool NotEquals(const Patients& first, const Patients& second);
 	static bool GreaterThan(const Patients& first, const Patients& second);
