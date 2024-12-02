@@ -10,7 +10,7 @@ using std::cin;
 using std::setw;
 
 /**
- * @brief Creates a new Patients Age and stores details in arrays. 
+ * @brief Creates a new Patient and stores details in arrays. 
  */
 void PatientsManager::create() {
     if (numOfPatients >= MAX_PATIENTS) {
@@ -24,7 +24,7 @@ void PatientsManager::create() {
     cout << "Enter Patients PatientID: ";
     cin >> PatientID;
 
-    // Ensure Patients Age PatientID is unique
+
     if (findIndexById(PatientID) != -1) {
         cout << "Error: Patients PatientID already exists. Please use a unique PatientID.\n";
         return;
@@ -33,7 +33,7 @@ void PatientsManager::create() {
     cout << "Enter Age: ";
     cin >> Age;
 
-    // Store the Patients Age details
+    
     pat[numOfPatients].PatientID = PatientID;
     pat[numOfPatients].Age = Age;
     numOfPatients++;
@@ -61,7 +61,7 @@ void PatientsManager::displayAll() {
 }
 
 /**
- * @brief Finds the index of a Patients Age by PatientID.
+ * @brief Finds the index of a Patient by PatientID.
  * @param PatientID Patients PatientID to search for.
  * @return Index of the Patients id if found, -1 otherwise.
  */

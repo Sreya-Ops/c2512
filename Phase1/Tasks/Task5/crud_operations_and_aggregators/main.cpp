@@ -16,10 +16,10 @@ int main() {
     PatientsManager manager;
     PatientsAggregator aggregator;
    
-    int choice; // User's menu choice
+    int choice; 
 
     do {
-        printMenu(); // Display menu
+        printMenu();
         cout << "Enter your choice: ";
         cin >> choice;
 

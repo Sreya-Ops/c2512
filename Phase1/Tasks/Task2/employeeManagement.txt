@@ -21,7 +21,22 @@ You need to develop a C++ program that performs the following tasks:
    - Implement a function 
    to print all employee salaries stored in the array.
 
-`Modular Approach`:
+`Modular Approach`:10% raised number of 200 is .
+user@user-HP-Laptop-15-da0xxx:~/Documents/script$ vim script02.sh
+user@user-HP-Laptop-15-da0xxx:~/Documents/script$ ./script02.sh
+Enter number:200
+10% raised number of 200 is 220.
+user@user-HP-Laptop-15-da0xxx:~/Documents/script$ vim script02.sh
+user@user-HP-Laptop-15-da0xxx:~/Documents/script$ ./script02.sh
+Enter number:100
+10% raised number of 100 is 110.
+user@user-HP-Laptop-15-da0xxx:~/Documents/script$ vim script02.sh
+user@user-HP-Laptop-15-da0xxx:~/Documents/script$ ./script02.sh
+Enter number:100
+expr: non-integer argument
+10% raised number of 100 is .
+user@user-HP-Laptop-15-da0xxx:~/Documents/script$ vim script02.sh
+
 - Break the problem into multiple functions:
   - A function for `inputting the salaries`.
   - A function for `finding the second highest salary`.

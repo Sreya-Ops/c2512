@@ -15,7 +15,7 @@ class Patients {
         bool GreaterThan(const Patients& other);
         bool LessThan(const Patients& other);
         
-        //getters-setters
+    
         string GetPatientID();
         int GetAge();
 };

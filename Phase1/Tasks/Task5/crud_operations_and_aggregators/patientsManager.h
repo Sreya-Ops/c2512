@@ -26,6 +26,6 @@ class PatientsManager {
         void editById();
         void deleteById();
         
-        //
+        //constructor
         PatientsManager();
 };
