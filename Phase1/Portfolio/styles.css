@@ -1,0 +1,246 @@
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background: black; 
+    color: lightgray; 
+}
+
+.navbar {
+    background: rgb(127, 141, 137); 
+    padding: 50px 60px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(3, 32, 36); 
+    font-weight: bold; 
+}
+
+.navbar ul li a:hover {
+    color: rgb(18, 77, 100); 
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, rgb(8, 45, 59), dimgray); 
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid rgb(77, 77, 109); 
+    margin-bottom: 20p
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: rgb(4, 52, 68); 
+}
+
+.hero h1 span {
+    color: rgb(2, 27, 36); 
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+    color: rgb(102, 124, 129); 
+}
+
+.hero h2 span {
+    color: rgb(2, 40, 53);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: rgb(78, 148, 153); 
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: rgb(2, 31, 36); 
+    text-decoration: none;
+    font-size: 2.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: rgb(84, 107, 112); 
+    transform: scale(1.2);
+}
+
+#about {
+    background: rgba(5, 40, 49, 0.911); 
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    color: rgb(121, 143, 156); 
+    margin-bottom: 20px;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: rgb(162, 183, 187); 
+}
+
+#personal-info {
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(12, 65, 78, 0.911);
+}
+
+#personal-info h2  {
+    color: rgb(3, 27, 27);
+    margin-bottom: 20px;
+}
+
+#personal-info p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: rgb(120, 150, 156);
+    line-height: 1.6;
+}
+
+#education {
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(36, 93, 107, 0.911);
+}
+
+#education h2 {
+    color: rgb(35, 56, 68);
+    margin-bottom: 20px;
+}
+
+#education p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: rgb(111, 163, 163);
+    line-height: 1.6;
+}
+
+#projects {
+    background: rgba(5, 40, 49, 0.911);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#projects h2 {
+    color: rgb(84, 107, 116);
+    margin-bottom: 30px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-box {
+    background: rgb(82, 124, 118);
+    color: lightgray;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 280px; 
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+    background: rgb(104, 151, 143);
+}
+
+.project-box h3 {
+    color: rgb(23, 86, 90);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.project-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgb(160, 190, 196);
+    text-align: center;
+}
+
+#skills {
+    background: rgb(61, 100, 100); 
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#skills h2 {
+    color: rgb(7, 37, 51); 
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-box {
+    background: rgb(8, 41, 36);
+    color: lightgray; 
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(9, 99, 110, 0.5); 
+    transition: transform 0.3s;
+}
+
+.skill-box:hover {
+    transform: scale(1.1);
+    background: rgb(33, 88, 95); 
+}
+
+#contact {
+    background: rgb(12, 74, 78); 
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    color: rgb(3, 45, 49); 
+}
+
+#contact p {
+    color: rgb(93, 160, 172); 
+    margin: 10px 0;
+}
+
+footer {
+    background: dimgray;
+    padding: 20px;
+    text-align: center;
+    color: rgb(213, 224, 226); 
+}

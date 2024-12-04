@@ -7,13 +7,14 @@ Evolution of Linux OS
 
 2.  -1991 : Linus Torvalds a Finnish-American software engineer releases the first Linux kernel as a hobby project.
     -Linux kernel is the core component of the Linux operating system. 
-    -It serves as the intermediary between the hardware and the software, managing system resources and enabling communication between the various parts of the computer. 
+    -It serves as the intermediary between the hardware and the software, managing system resources and enabling 
+     communication between the various parts of the computer. 
     -Linux kernel is widely used in products like Android, web servers, smart devices, and supercomputers.
-
 
 3.  -1992 : Linux adopted the GNU General Public License (GPL), which allowed it to combine GNU's tools with the Linux kernel, 
      creating a fully functional operating system that anyone could use and modify.
-    -The combination of the GNU tools and the Linux kernel has made GNU/Linux one of the most popular operating systems, especially in server environments and embedded systems.
+    -The combination of the GNU tools and the Linux kernel has made GNU/Linux one of the most popular operating systems, 
+     especially in server environments and embedded systems.
     
 
 4.  -Mid-1990s : Linux became popular for servers because it was free and reliable. 
