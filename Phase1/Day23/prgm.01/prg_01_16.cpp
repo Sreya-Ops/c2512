@@ -1,3 +1,16 @@
+/*Create one static object for final-derived class
+and call all behaviours
+and 
+one dynamic object for final-derived class 
+and call all behaviours
+
+Define constructors and destructors for all the classes
+
+`Base Class:` Artwork `{field: creator, behavior: display()}`
+- `Derived Class 1:` Painting `{field: canvasType, behavior: showcase()}`
+- `Derived Class 2:` Sculpture `{field: material, behavior: sculpt()}`
+- `Final Derived Class:` MixedMediaArt `{field: blendType, behavior: combine()}`*/ 
+
 #include <iostream>
 #include <string>
 
@@ -15,7 +28,7 @@ public:
         cout << "Artwork constructor called for creator: " << creator << endl;
     }
 
-    ~Artwork() {
+    virtual ~Artwork() {
         cout << "Artwork destructor called for creator: " << creator << endl;
     }
 
@@ -35,7 +48,7 @@ public:
         cout << "Painting constructor called for canvas type: " << canvasType << endl;
     }
 
-    ~Painting() {
+    virtual ~Painting() {
         cout << "Painting destructor called for canvas type: " << canvasType << endl;
     }
 
@@ -54,7 +67,7 @@ public:
         cout << "Sculpture constructor called for material: " << material << endl;
     }
 
-    ~Sculpture() {
+    virtual ~Sculpture() {
         cout << "Sculpture destructor called for material: " << material << endl;
     }
 

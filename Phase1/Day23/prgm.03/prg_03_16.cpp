@@ -1,3 +1,17 @@
+/*one two dynamic/static objects of the Derived class 
+pointed by base class pointer
+and call all behaviours using Base class pointer 
+
+Override Base Class behaviors to derived class.
+Define constructors and destructors for all the classes 
+Define all the fields as dynamic fields in each class 
+
+`Base Class:` `Shape`  
+  - Fields: `color`, `borderWidth`  
+  - Pure Virtual Behaviors: `draw()`, `calculateArea()`.  
+- `Derived Class:` `Circle`  
+  - Fields: `radius`  */
+
 #include <iostream>
 #include <cstring> 
 
@@ -9,14 +23,14 @@ using std::endl;
 class Shape {
 protected:
     char* color;
-    int borderWidth;
+    int* borderWidth;
 
 public:
-    Shape(const char* shapeColor, int width) 
-        : borderWidth(width) {
+    Shape(const char* shapeColor, int width) {
         color = new char[strlen(shapeColor) + 1];
         strcpy(color, shapeColor);
-        cout << "Shape constructor called with color " << color << " and border width " << borderWidth << endl;
+        borderWidth = new int(width);
+        cout << "Shape constructor called with color " << color << " and border width " << *borderWidth << endl;
     }
 
     virtual ~Shape() {
@@ -40,32 +54,24 @@ public:
         cout << "Circle constructor called with radius " << *radius << endl;
     }
 
-    ~Circle() override {
+    virtual ~Circle() {
         cout << "Circle destructor called for radius " << *radius << endl;
         delete radius;
     }
 
-    void draw() const override {
-        cout << "Drawing a circle with color " << color << ", border width " << borderWidth << ", and radius " << *radius << endl;
+    void draw() override {
+        cout << "Drawing a circle with color " << color << ", border width " << *borderWidth << ", and radius " << *radius << endl;
     }
 
-    double calculateArea() const override {
+    double calculateArea() override {
         return 3.14159 * (*radius) * (*radius);
     }
 };
 
 
 int main() {
-    // Static Object
-    cout << "Static Object:\n";
-    Shape* staticCircle = new Circle("Red", 2, 5.0);
 
-    staticCircle->draw();
-    cout << "Area: " << staticCircle->calculateArea() << "\n";
-    delete staticCircle;
-
-    // Dynamic Object
-    std::cout << "\nDynamic Objects:\n";
+  
     Shape* dynamicCircle1 = new Circle("Blue", 3, 7.0);
     Shape* dynamicCircle2 = new Circle("Green", 1, 10.0);
 

@@ -1,3 +1,14 @@
+/*Create two static objects for Both Base and Derived class
+and call all behaviours
+and 
+one two dynamic objects for Base and Derived class 
+and call all behaviours
+
+Define constructors and destructors for all the classes
+
+Create a base class `Product` with fields `productName` and `price`, and a behavior `addToCart()`.
+- Derive a class `Clothing` with fields `size` and a behavior `applyDiscount()`. */
+
 #include <iostream>
 #include <string>
 
@@ -17,7 +28,7 @@ public:
         cout << "Product constructor called for " << productName << endl;
     }
 
-    ~Product() {
+    virtual ~Product() {
         cout << "Product destructor called for " << productName << endl;
     }
 
