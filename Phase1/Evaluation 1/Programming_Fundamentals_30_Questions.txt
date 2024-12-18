@@ -791,7 +791,7 @@ int main(void)
 pseudofunctions :
 
 function isLeapYear(year -> int) -> bool
-        return ((((year % 4)== 0) && ((year % 100) !=0)) || ((year % 400) == 0)))
+        return ((((year % 4)== 0) && ((year % 100) !=0)) || ((year % 400) == 0))
            
 function isLeapYearTest()
         input year
@@ -816,7 +816,7 @@ using std::cin;
 
 bool isLeapYear(int year)
 {
-    return ((((year % 4) == 0) && ((year % 100) !=0)) || ((year % 400) == 0)));
+    return ((((year % 4) == 0) && ((year % 100) !=0)) || ((year % 400) == 0));
 }
         
 void isLeapYearTest(void)
